@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Фіксатор провода — 99 грн | Швидке тепло</title>
+  <meta name="description" content="Компактний тепловентилятор. Акційна ціна 99 грн. Доставка Новою Поштою. Замовлення надсилається в Telegram." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo">🔥</div>
+        <div class="brand__text">
+          <div class="brand__name">ТеплоМаркет</div>
+          <div class="brand__tagline">Затишок за хвилину</div>
+        </div>
+      </div>
+
+      <div class="promo">
+        <div class="promo__label">Акція закінчиться через</div>
+        <div class="timer" id="timer" aria-live="polite">
+          <span class="timer__box"><span id="tH">00</span><small>год</small></span>
+          <span class="timer__sep">:</span>
+          <span class="timer__box"><span id="tM">00</span><small>хв</small></span>
+          <span class="timer__sep">:</span>
+          <span class="timer__box"><span id="tS">00</span><small>с</small></span>
+        </div>
+      </div>
+
+      <button class="btn btn--primary topbar__cta" id="openOrderTop">Замовити</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="badge">Хіт сезону • Обмежена партія</div>
+          <h1>Захист кабелю від перелому TWIST cable <br><span class="accent">за 99 грн</span></h1>
+          <p class="lead">
+            Швидко прогріває невеликий простір, зручно брати в дорогу.
+            Ідеально для дому, офісу, дачі або тимчасового обігріву.
+          </p>
+
+          <div class="price">
+            <div class="price__old">299 грн</div>
+            <div class="price__new">99 грн</div>
+            <div class="price__note">+ доставка Новою Поштою</div>
+          </div>
+
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg" id="openOrder">Замовити зараз</button>
+            <a class="btn btn--ghost btn--lg" href="#reviews">Відгуки</a>
+          </div>
+
+          <ul class="bullets">
+            <li>🔌 Працює від стандартної розетки</li>
+            <li>⚡ Швидкий нагрів за кілька хвилин</li>
+            <li>🧳 Компактний формат</li>
+            <li>✅ Оплата при отриманні (за бажанням)</li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="product-card">
+            <img src="assets/img/product.png" alt="Фото товару" class="product-img" />
+            <div class="product-card__meta">
+              <div class="stars" aria-label="Рейтинг 4.8 з 5">
+                ★★★★☆ <span class="muted">(4.8/5)</span>
+              </div>
+              <div class="stock">Залишилось: <b id="stock">17</b> шт.</div>
+            </div>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <div class="trust__title">Доставка</div>
+              <div class="trust__text">Нова Пошта 1–3 дні</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__title">Гарантія</div>
+              <div class="trust__text">Перевірка при отриманні</div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__title">Підтримка</div>
+              <div class="trust__text">Консультація в Telegram</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Чому вам сподобається</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Швидко гріє</h3>
+            <p>Подає тепле повітря майже одразу після увімкнення.</p>
+          </div>
+          <div class="card">
+            <h3>Зручно</h3>
+            <p>Компактний розмір — можна переносити між кімнатами.</p>
+          </div>
+          <div class="card">
+            <h3>Економно</h3>
+            <p>Ідеальний як локальний обігрів, коли не хочеться гріти всю квартиру.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <h2>Відгуки покупців</h2>
+        <div class="reviews">
+          <article class="review">
+            <div class="review__top">
+              <div class="avatar">О</div>
+              <div>
+                <div class="review__name">Олена, Київ</div>
+                <div class="review__stars">★★★★★</div>
+              </div>
+            </div>
+            <p>Дуже виручив в офісі — гріє швидко, маленький, не заважає. За таку ціну топ!</p>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <div class="avatar">А</div>
+              <div>
+                <div class="review__name">Андрій, Львів</div>
+                <div class="review__stars">★★★★★</div>
+              </div>
+            </div>
+            <p>Замовив на пробу — прийшло швидко, перевірив на пошті. Працює, дме теплим.</p>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <div class="avatar">І</div>
+              <div>
+                <div class="review__name">Ірина, Дніпро</div>
+                <div class="review__stars">★★★★☆</div>
+              </div>
+            </div>
+            <p>Для маленької кімнати саме те. Виглядає акуратно, зручно переносити.</p>
+          </article>
+        </div>
+
+        <div class="cta">
+          <div class="cta__left">
+            <div class="cta__title">Готові замовити за 99 грн?</div>
+            <div class="cta__sub">Заповніть форму — ми одразу надішлемо замовлення в Telegram.</div>
+          </div>
+          <button class="btn btn--primary btn--lg" id="openOrderBottom">Замовити</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Доставка та оплата</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Доставка</h3>
+            <ul class="list">
+              <li>Нова Пошта (відділення / поштомат)</li>
+              <li>Термін: 1–3 робочі дні</li>
+              <li>SMS/повідомлення від НП при прибутті</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Оплата</h3>
+            <ul class="list">
+              <li>Оплата при отриманні (накладений платіж) або передоплата</li>
+              <li>Перевірка товару на пошті</li>
+              <li>Підтримка в Telegram</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="muted">© <span id="year"></span> ТеплоМаркет. Усі права захищені.</div>
+      <div class="muted">Цей сайт — демонстраційний лендинг. Додайте свої реквізити/контакти за потреби.</div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal__overlay" data-close="1"></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+      <div class="modal__header">
+        <h3 id="orderTitle">Оформлення замовлення</h3>
+        <button class="iconbtn" aria-label="Закрити" data-close="1">✕</button>
+      </div>
+
+      <form class="form" id="orderForm">
+        <div class="form__row">
+          <label>ПІБ</label>
+          <input type="text" name="fio" placeholder="Іваненко Іван Іванович" required minlength="3" />
+        </div>
+
+        <div class="form__row">
+          <label>Номер телефону</label>
+          <input type="tel" name="phone" placeholder="+380XXXXXXXXX" required />
+          <small class="hint">Формат: +380… (Україна)</small>
+        </div>
+
+        <div class="form__row">
+          <label>Область</label>
+          <input type="text" name="region" placeholder="Київська" required />
+        </div>
+
+        <div class="form__row">
+          <label>Місто</label>
+          <input type="text" name="city" placeholder="Київ" required />
+        </div>
+
+        <div class="form__row">
+          <label>Відділення / поштомат Нової Пошти</label>
+          <input type="text" name="np" placeholder="Відділення №12" required />
+        </div>
+
+        <div class="form__row form__row--two">
+          <div>
+            <label>Кількість</label>
+            <input type="number" name="qty" min="1" value="1" required />
+          </div>
+          <div>
+            <label>Ціна</label>
+            <input type="text" value="99 грн" disabled />
+          </div>
+        </div>
+
+        <div class="form__actions">
+          <button class="btn btn--primary btn--lg" type="submit" id="submitBtn">Відправити замовлення</button>
+          <div class="muted tiny">Натискаючи “Відправити”, ви погоджуєтесь на обробку даних для оформлення замовлення.</div>
+        </div>
+
+        <div class="notice" id="notice" hidden></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
