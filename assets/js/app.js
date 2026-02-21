@@ -43,8 +43,12 @@
   const modal = $("#orderModal");
   const openers = ["#openOrder", "#openOrderTop", "#openOrderBottom"].map(sel => $(sel)).filter(Boolean);
   openers.forEach(btn => btn.addEventListener("click", () => openModal()));
-  $("[data-close='1']", modal).addEventListener("click", () => closeModal());
-  $(".modal__overlay", modal).addEventListener("click", () => closeModal());
+ $$("[data-close='1']", modal).forEach(el => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeModal();
+  });
+});
   document.addEventListener("keydown", (e)=>{ if(e.key==="Escape" && modal.classList.contains("is-open")) closeModal(); });
 
   function openModal(){
