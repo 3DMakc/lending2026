@@ -101,8 +101,6 @@ phoneInput.addEventListener("input", () => {
   ensurePrefix();
 });
 
-const notice = $("#notice");
-const submitBtn = $("#submitBtn");
   const notice = $("#notice");
   const submitBtn = $("#submitBtn");
 
