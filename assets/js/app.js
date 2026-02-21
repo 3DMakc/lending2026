@@ -64,6 +64,45 @@
 
   // Form submit -> Telegram
   const form = $("#orderForm");
+
+// Phone: keep +380 prefix
+const phoneInput = $("input[name='phone']", form);
+
+function ensurePrefix() {
+  if (!phoneInput.value.startsWith("+380")) {
+    const digits = phoneInput.value.replace(/\D/g, "");
+    let tail = digits;
+    if (tail.startsWith("380")) tail = tail.slice(3);
+    if (tail.startsWith("0")) tail = tail.slice(1);
+    tail = tail.slice(0, 9);
+    phoneInput.value = "+380" + tail;
+  }
+  if (phoneInput.value.length < 4) phoneInput.value = "+380";
+}
+
+function moveCaretToEnd() {
+  const len = phoneInput.value.length;
+  phoneInput.setSelectionRange(len, len);
+}
+
+phoneInput.addEventListener("focus", () => { ensurePrefix(); setTimeout(moveCaretToEnd, 0); });
+phoneInput.addEventListener("click", () => { ensurePrefix(); setTimeout(moveCaretToEnd, 0); });
+
+phoneInput.addEventListener("keydown", (e) => {
+  const pos = phoneInput.selectionStart || 0;
+  if ((e.key === "Backspace" && pos <= 4) || (e.key === "Delete" && pos < 4)) {
+    e.preventDefault();
+    ensurePrefix();
+    moveCaretToEnd();
+  }
+});
+
+phoneInput.addEventListener("input", () => {
+  ensurePrefix();
+});
+
+const notice = $("#notice");
+const submitBtn = $("#submitBtn");
   const notice = $("#notice");
   const submitBtn = $("#submitBtn");
 
